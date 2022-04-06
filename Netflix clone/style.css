@@ -1,0 +1,603 @@
+@font-face {
+  font-family: Netflix Font;
+  src: url("./fonts/NetflixSansRegular.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: Netflix Font, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1em;
+}
+
+p {
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  padding: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+header,
+footer,
+section {
+  width: 100%;
+  height: 100%;
+}
+/* Header Styling */
+header {
+  height: 90vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0,
+      rgba(0, 0, 0, 0.4) 40%,
+      rgba(0, 0, 0, 0.5) 75%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(https://assets.nflxext.com/ffe/siteui/vlv3/d0982892-13ac-4702-b9fa-87a410c1f2da/4e76641c-86be-4bfe-a4c3-fffc9477c28b/EG-en-20220321-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-bottom: 10px solid #303030;
+}
+
+.top-bar {
+  max-width: 100%;
+  margin: 0;
+  padding: 1rem 2rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo svg {
+  width: 130px;
+  height: 50px;
+  fill: #e50914;
+  margin-left: 1rem;
+}
+
+.account-lang {
+  width: 220px;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.lang-btn,
+.signin-btn {
+  width: 95px;
+  border: none;
+  outline: none;
+}
+
+.lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1.3px solid #fff;
+  color: #fff;
+}
+
+.lang-btn .material-icons {
+  font-size: 1.3em;
+  margin-right: 0.2rem;
+}
+
+#language {
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 100;
+  border: none;
+  outline: none;
+}
+
+.signin-btn {
+  background-color: #e50914;
+  color: #fff;
+  font-size: 1em;
+  border-radius: 5px;
+  padding: 0.4rem 1rem;
+}
+.titles-subscribe {
+  max-width: 800px;
+  height: auto;
+  margin: 1rem auto;
+  padding: 1.7rem;
+  color: #fff;
+  text-align: center;
+}
+
+.titles-subscribe h1 {
+  font-size: 3em;
+  margin-bottom: 1rem;
+}
+
+.titles-subscribe h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 100;
+}
+
+.titles-subscribe h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.66rem;
+  font-size: 1.3rem;
+}
+
+.subscribe-form {
+  max-width: 780px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: auto;
+}
+
+.email-input {
+  width: 500px;
+  height: 60px;
+}
+.subscribe-form div:first-child {
+  position: relative;
+}
+.email-input:focus ~ label {
+  top: 8px;
+  color: #8c8c8c;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.email-input:focus {
+  outline: 1.2px solid blue;
+}
+label {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 10px;
+  color: #8c8c8c;
+  transition: 0.5s;
+}
+.subscribe-btn {
+  width: 215px;
+  height: 60px;
+  background-color: #e50914;
+  color: #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  outline: none;
+}
+
+.subscribe-btn span:first-child {
+  font-size: 1.5em;
+}
+main {
+  max-width: 100%;
+}
+
+#tv-section,
+#download-section,
+#devices-section,
+#kids-section,
+#questions-section {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 1.6rem;
+  border-bottom: 7px solid #303030;
+}
+/* Common styling between inners */
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0 auto;
+}
+
+/*Tv section styling*/
+.tv-text {
+  color: #fff;
+  text-align: left;
+  padding-left: 1.5rem;
+}
+.tv-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.5rem;
+}
+
+.tv-text p {
+  font-size: 1.6em;
+  width: 510px;
+}
+.tv-image img:nth-child(1) {
+  width: 560px;
+  max-width: 100%;
+}
+.tv-image {
+  position: relative;
+}
+.tv-animation {
+  position: absolute;
+  z-index: -1;
+  bottom: 4rem;
+  left: 4.6rem;
+}
+.tv-animation video {
+  max-width: 100%;
+}
+
+/*Download section styling*/
+.download-image {
+  position: relative;
+}
+
+.download-image img:nth-child(1) {
+  width: 500px;
+}
+
+.download-bar {
+  display: inline-flex;
+  align-items: center;
+  border: 2px solid #303030;
+  background-color: #000;
+  border-radius: 10px;
+  width: 330px;
+  height: 100px;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.download-bar img:nth-child(1) {
+  width: 70px;
+  padding: 0.66rem;
+}
+
+.download-bar img:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  margin: auto;
+}
+
+.bar-text {
+  padding-left: 0.88rem;
+}
+
+.download-bar .text1 {
+  color: #fff;
+  font-size: 0.88em;
+  text-align: left;
+}
+
+.download-bar .text2 {
+  color: #0071eb;
+}
+
+.download-text h1,
+.download-text h2 {
+  color: #fff;
+}
+
+.download-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.5rem;
+  width: 500px;
+}
+
+.download-text h2 {
+  font-size: 1.6em;
+  width: 500px;
+}
+/*Devices section styling*/
+.devices-text h1,
+.devices-text h2 {
+  color: #fff;
+}
+
+.devices-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.5rem;
+  width: 500px;
+}
+
+.devices-text h2 {
+  font-size: 1.6em;
+  width: 500px;
+}
+
+.devices-image img:nth-child(1) {
+  width: 530px;
+}
+
+.devices-image {
+  position: relative;
+}
+
+.devices-animation {
+  position: absolute;
+  top: 2rem;
+  left: 6.5rem;
+  z-index: -1;
+}
+
+.devices-animation video {
+  width: 320px;
+}
+/*Kids section styling*/
+.kids-image img {
+  width: 500px;
+  margin-right: 2rem;
+}
+
+.kids-text h1,
+.kids-text h2 {
+  color: #fff;
+}
+
+.kids-text h1 {
+  font-size: 3em;
+  margin-bottom: 0.5rem;
+  width: 510px;
+}
+
+.kids-text h2 {
+  font-size: 1.6em;
+  width: 500px;
+}
+/*Questions section styling*/
+#questions-section h1 {
+  font-size: 3em;
+  text-align: center;
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+}
+
+#questions-section h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.66rem;
+  font-size: 1.1em;
+  color: #fff;
+  text-align: center;
+}
+
+#questions-section .subscribe-form {
+  text-align: center;
+  padding: 1rem;
+}
+
+.faqs {
+  margin: auto;
+  text-align: center;
+}
+
+.faq {
+  margin-bottom: 0.55rem;
+}
+
+.faq-btn {
+  background-color: #303030;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+  width: 100%;
+  max-width: 800px;
+  border: none;
+  outline: none;
+  font-size: 1.6em;
+  transition: 1s;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-btn .material-icons {
+  font-size: 1.6em;
+  font-weight: lighter;
+}
+
+.faq-text {
+  max-width: 800px;
+  padding: 1rem;
+  display: none;
+  background-color: #303030;
+  overflow: hidden;
+  margin-top: 1px;
+  margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faq-text p {
+  color: #fff;
+  text-align: left;
+  font-size: 1.2em;
+  padding: 1rem;
+}
+
+/*Footer section styling*/
+footer {
+  padding: 3rem;
+  height: auto;
+}
+
+footer a {
+  color: #757575;
+}
+.inner-footer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: center;
+  padding: 2rem;
+}
+.col {
+  margin-left: 1.5rem;
+}
+.col a {
+  display: block;
+  padding: 0.77rem;
+  font-size: 0.8em;
+}
+
+.col a:hover {
+  text-decoration: underline;
+}
+
+.contact,
+.language-version {
+  width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  margin-bottom: 0.55rem;
+}
+
+.language-version #language {
+  background-color: transparent;
+  color: #757575;
+  font-size: 1.1em;
+  font-weight: 100;
+  border: none;
+  outline: none;
+}
+.language-version .lang-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid #757575;
+  color: #757575;
+  padding: 1.2rem 4rem;
+}
+.language-version p {
+  color: #757575;
+  margin: 4rem;
+  font-size: 0.8em;
+  margin-left: 0;
+  margin-top: 1.5rem;
+}
+
+/* Media queries for devices with maximum width:940px */
+@media screen and (max-width: 940px) {
+  .logo svg {
+    width: 110px;
+  }
+  .titles-subscribe h3 {
+    width: 420px;
+    margin: 1rem auto;
+  }
+  .subscribe-form {
+    flex-direction: column;
+    margin: auto;
+  }
+
+  .subscribe-btn {
+    margin-top: 1rem;
+    width: 130px;
+    height: 40px;
+  }
+  .subscribe-btn span {
+    font-size: 1em;
+  }
+  .subscribe-btn span:first-child {
+    font-size: 1em;
+  }
+  .flex {
+    flex-direction: column;
+  }
+  .inner-download,
+  .inner-kids {
+    flex-direction: column-reverse;
+  }
+  .flex h1,
+  .flex p,
+  .flex h2 {
+    text-align: center;
+    margin: auto;
+  }
+  .flex h1 {
+    font-size: 1.8em;
+  }
+  .flex h2 {
+    font-size: 1em;
+    width: 90%;
+    margin-top: 0.66rem;
+  }
+  .flex p {
+    font-size: 1.1em;
+    margin-top: 0.66rem;
+    width: 100%;
+  }
+  #questions-section h1 {
+    font-size: 2em;
+  }
+}
+
+/* Media queries for devices with maximum width:700px */
+@media screen and (max-width: 700px) {
+  .logo svg {
+    width: 90px;
+  }
+  .subscribe-form {
+    margin: auto;
+  }
+  .email-input {
+    width: 450px;
+    height: 50px;
+  }
+  .flex h1 {
+    font-size: 2.4em;
+  }
+  .flex h2 {
+    font-size: 1.2em;
+    width: 90%;
+    margin-top: 0.66rem;
+  }
+  .flex p {
+    font-size: 1.3em;
+    margin-top: 0.66rem;
+    width: 100%;
+  }
+  .inner-footer {
+    padding: 0;
+  }
+}
+
+/* Media queries for devices with maximum width:560px */
+@media screen and (max-width: 560px) {
+  .email-input {
+    width: 433px;
+  }
+}
